@@ -7,7 +7,7 @@ export async function main() {
   // Print the completion returned by the LLM.
   console.log(chatCompletion.choices[0]?.message?.content || "");
 }
-
+//
 export async function getGroqChatCompletion() {
   return groq.chat.completions.create({
     messages: [
