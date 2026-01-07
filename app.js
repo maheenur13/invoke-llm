@@ -1,7 +1,7 @@
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-
+//
 export async function main() {
   const chatCompletion = await getGroqChatCompletion();
   // Print the completion returned by the LLM.
@@ -19,3 +19,6 @@ export async function getGroqChatCompletion() {
     model: "openai/gpt-oss-20b",
   });
 }
+
+// Run the main function
+main();
