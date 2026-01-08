@@ -10,7 +10,7 @@ export async function main() {
 
 export async function getGroqChatCompletion() {
   return groq.chat.completions.create({
-    temperature: 0,
+    temperature: 0.1,
     messages: [
       {
         role: "system",
