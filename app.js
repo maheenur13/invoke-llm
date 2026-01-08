@@ -10,10 +10,17 @@ export async function main() {
 
 export async function getGroqChatCompletion() {
   return groq.chat.completions.create({
+    temperature: 0,
     messages: [
       {
+        role: "system",
+        content:
+          "You are a smart and well educated nd experienced english trainer. You should train english properly to the users. Be polite always! You should answer only question related to english learning nothing else.",
+      },
+
+      {
         role: "user",
-        content: "Explain the importance of fast language models",
+        content: "Tell me how can i learn english properly?",
       },
     ],
     model: "openai/gpt-oss-20b",
